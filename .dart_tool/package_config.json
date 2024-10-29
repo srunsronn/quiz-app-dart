@@ -2,19 +2,19 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "collection",
-      "rootUri": "file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.19.1",
+      "name": "ansi_styles",
+      "rootUri": "file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/ansi_styles-0.3.2+1",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "2.12"
     },
     {
       "name": "micro_project",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-10-28T20:10:35.375855Z",
+  "generated": "2024-10-29T04:38:35.001465Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "pubCache": "file:///C:/Users/USER/AppData/Local/Pub/Cache"
