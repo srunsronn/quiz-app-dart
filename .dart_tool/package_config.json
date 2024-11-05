@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "ansi_styles",
-      "rootUri": "file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/ansi_styles-0.3.2+1",
+      "rootUri": "file:///C:/Users/U-ser/AppData/Local/Pub/Cache/hosted/pub.dev/ansi_styles-0.3.2+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -11,11 +11,13 @@
       "name": "micro_project",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-10-29T04:38:35.001465Z",
+  "generated": "2024-10-29T07:07:25.653134Z",
   "generator": "pub",
-  "generatorVersion": "3.5.4",
-  "pubCache": "file:///C:/Users/USER/AppData/Local/Pub/Cache"
+  "generatorVersion": "3.4.4",
+  "flutterRoot": "file:///C:/src/flutter",
+  "flutterVersion": "3.22.3",
+  "pubCache": "file:///C:/Users/U-ser/AppData/Local/Pub/Cache"
 }

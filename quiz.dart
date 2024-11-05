@@ -13,15 +13,34 @@ void main(List<String> args) {
 
   // Adding questions to the quiz
   q.addQuestion(SingleAnswer(
-      "What is what?", ["1. Hello", "2. Hello 2", "3. Hello 3", "4. Hello 4"], 4));
+      "What is 2+2?", ["1. 4", "2. 3", "3. 2", "4. 1"], 1));
   q.addQuestion(MultipleAnswers(
       "Find x where x+3=0?", ["1. x=3", "2. x=4", "3. x=-3", "4. x=-3"], [3, 4]));
+  q.addQuestion(SingleAnswer("How many loop in programming?", ["1. 2","2. 3", "3. 1","4. 1"], 2));
 
   // Participant input
-  print(AnsiStyles.cyan("Enter First Name: "));
-  String? firstName = stdin.readLineSync();
-  print(AnsiStyles.cyan("Enter Last Name: "));
-  String? lastName = stdin.readLineSync();
+  // validate user input 
+  // Regular expression to match only alphabetic characters (no numbers or special characters)
+  final nameRegex = RegExp(r'^[a-zA-Z]+$');
+
+  // Participant input
+  String? firstName;
+  while (firstName == null || !nameRegex.hasMatch(firstName)) {
+    print(AnsiStyles.cyan("Enter First Name: "));
+    firstName = stdin.readLineSync();
+    if (firstName == null || !nameRegex.hasMatch(firstName)) {
+      print(AnsiStyles.red("Invalid input. First Name should contain only letters."));
+    }
+  }
+
+  String? lastName;
+  while (lastName == null || !nameRegex.hasMatch(lastName)) {
+    print(AnsiStyles.cyan("Enter Last Name: "));
+    lastName = stdin.readLineSync();
+    if (lastName == null || !nameRegex.hasMatch(lastName)) {
+      print(AnsiStyles.red("Invalid input. Last Name should contain only letters."));
+    }
+  }
   Participant p = Participant(firstName, lastName);
   q.addParticipant(p);
 
