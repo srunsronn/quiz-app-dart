@@ -57,6 +57,7 @@ void main(List<String> args) {
       print(AnsiStyles.green("\nEnter your answer (e.g., 1): "));
       int selectedAns = int.parse(stdin.readLineSync()!);
       if (question.isCorrectAnswer(selectedAns)) {
+        // update score 
         p.updateScore(1);
         print(AnsiStyles.green("Correct!\n"));
       } else {
@@ -68,6 +69,7 @@ void main(List<String> args) {
       List<int> selected = selectedAns.map(int.parse).toList();
 
       if (question.isCorrectAnswer(selected)) {
+        // update score for multiple answers
         p.updateScore(1);
         print(AnsiStyles.green("Correct!\n"));
       } else {
@@ -150,9 +152,14 @@ class MultipleAnswers extends Question {
   MultipleAnswers(super.title, super.optionAnswers, this.correctAnswers);
 
   bool isCorrectAnswer(List<int> selectedAnswers) {
+    //we sort selectAnsers and CorrectAnswer for make have the same order of elements
     selectedAnswers.sort();
+    //print("slecterAns Sort: $selectedAnswers");
     correctAnswers.sort();
+    //print("slecterAns Sort: $correctAnswers");
+
     return selectedAnswers.length == correctAnswers.length &&
+        // every function we use to check every elements in order. 
         selectedAnswers.every((answer) => correctAnswers.contains(answer));
   }
 }
